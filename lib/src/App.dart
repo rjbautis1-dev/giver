@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 import 'package:giver/src/Controller.dart';
 
+import 'package:giver/src/screens/routes.dart' show Routes;
 import 'package:giver/src/screens/home_screen.dart';
 
 class Giver extends AppMVC {
@@ -18,7 +19,9 @@ class Giver extends AppMVC {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        Routes.root: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
+      },
     );
   }
 }
