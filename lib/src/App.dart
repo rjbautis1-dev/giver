@@ -4,7 +4,7 @@ import 'package:mvc_pattern/mvc_pattern.dart';
 import 'package:giver/src/Controller.dart';
 
 import 'package:giver/src/screens/routes.dart' show Routes;
-import 'package:giver/src/screens/home_screen.dart';
+import 'package:giver/src/view_handler.dart';
 
 class Giver extends AppMVC {
   Giver({Key key}) : super(con: _controller, key: key);
@@ -20,7 +20,7 @@ class Giver extends AppMVC {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        Routes.root: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
+        Routes.root: (context) => ViewHandler(),
       },
     );
   }
